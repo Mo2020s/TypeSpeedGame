@@ -49,6 +49,8 @@ header .main-heading{
     font-size: 30px;
     outline: none;
     border-radius: 7px;
+    border: 3px solid rgb(26, 240, 26);
+    caret-color: rgb(26, 240, 26);
 }
 
 .cover{

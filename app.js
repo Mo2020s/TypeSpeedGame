@@ -1,17 +1,16 @@
 const sentence =
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet temporibus vitae provident asperiores, mollitia obcaecati modi, pariatur assumenda consequatur a saepe illum explicabo nostrum, unde libero quis dicta doloremque voluptatibus.";
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet temporibus vitae provident asperiores, mollitia obcaecati modi.";
 let p = document.querySelector(".text");
 let add = document.querySelector("button");
 let input = document.querySelector(".input-text");
 let startButton = document.querySelector(".startButton");
 let restarButton = document.querySelector(".restartButton");
-
+let timeRemaining = 45;
 p.append(sentence);
 var text = p.innerText;
 var letterIndex = 0;
 let countDown;
 const timerElement = document.getElementById("timer");
-let timeRemaining = 60;
 
 input.disabled = true;
 input.setAttribute("maxlength", text.length);
@@ -23,7 +22,10 @@ input.addEventListener("keydown", function (event) {
 
 input.addEventListener("input", function (event) {
   if (check()) {
+    input.style.color = "black";
     playcolor(event.key);
+  } else {
+    input.style.color = "red";
   }
 });
 
@@ -43,18 +45,18 @@ startButton.addEventListener("click", function () {
   timerElement.style.display = "block";
   input.disabled = false;
   input.focus();
-  startButton.style.display = "none";
+  this.remove();
 });
 
 restarButton.addEventListener("click", function () {
+  restarButton.style.display = "none";
   letterIndex = 0;
   timerElement.style.display = "block";
-  restarButton.style.display = "none";
   input.value = "";
   input.disabled = false;
   input.focus();
   p.innerHTML = p.innerText.substring();
-  timeRemaining = 55;
+  timeRemaining = 40;
   updateTimer();
   countDown = setInterval(updateTimer, 1000);
 });
@@ -102,3 +104,7 @@ function updateTimer() {
     restarButton.style.display = "block";
   }
 }
+
+input.onpaste = function () {
+  return false;
+};
