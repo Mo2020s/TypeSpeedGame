@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.changeC{
+    color: rgb(26, 240, 26);
+}
+
+header{
+    height: 50px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+  
+header .main-heading{
+    text-align: center;
+    background-color: white;
+    padding: 0px 20px;
+    height: 50px;
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.container{
+    margin-top: 90px;
+}
+
+.container .text{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(171, 166, 166);
+    font-weight: bold;
+}
+
+.container .input-text{
+    width: 100%;
+    margin:  20px;
+    padding: 10px;
+    font-size: 30px;
+    outline: none;
+    border-radius: 7px;
+}
+
+.cover{
+    background-color: green;
+    margin-top: 140px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+#timer{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 23px;
+    color: red;
+    font-weight: bold;
+    display: none;
+}
+
+.buttons{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button {
+    padding: 10px 40px;
+    font-size: 15px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.buttons .restartButton{
+    display: none;
+}
