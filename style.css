@@ -39,6 +39,7 @@ header .main-heading{
     font-size: 30px;
     color: rgb(171, 166, 166);
     font-weight: bold;
+    user-select: none;
 }
 
 .container .input-text{
